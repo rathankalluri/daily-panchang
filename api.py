@@ -26,6 +26,8 @@ def login():
 
     karna_list = ["Kintughna","Bava","Baalava","Kaulava","Taitila","Gara","Vanija","Vishti","Bava","Balava","Kaulava","Taitila","Gara","Vanija","Vishti","Bava","Balava","Kaulava","Taitila","Gara","Vanija","Vishti","Bava","Balava","Kaulava","Taitila","Gara","Vanija","Vishti","Bava","Balava","Gara","Taitila","Kaulava","Vanija","Vishti",\
         "Bava","Balava","Kaulava","Taitila","Gara","Vanija","Vishti","Bava","Balava","Kaulava","Taitila","Gara","Vanija","Vishti","Bava","Balava","Kaulava","Taitila","Gara","Vanija","Vishti","Shakuni","Chatushpada","Naga"]
+    
+    ritu_list = ["Vasant - Spring","Grishma - Summer","Varsha - Monsoon","Sharad - Autumn","Hemant - Pre-winter","Shishir - Winter"]
 
     try:
         date = datetime.strptime(date,'%Y-%m-%d')
@@ -131,7 +133,8 @@ def login():
         masam = masa_list[Masa[0]-1]
         if Masa[1]:
             masam = "Adhika "+masam
-    #print("Masa :{0}".format(masam))
+    if Ritu is not None:
+        Ritu = ritu_list[Ritu]
 
     data2 = {
         'MoonRise': MR,
