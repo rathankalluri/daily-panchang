@@ -132,10 +132,14 @@ def login():
         #night_dura = timedelta(hours=hours,minutes=minutes,seconds=seconds)
         return night_dura, night_dura_formated
 
-    if Karna:
+    if Karna is not None:
         karna = karna_list[Karna[0]-1]
-    if Vaara:
+    else:
+        karna = ''
+    if Vaara is not None:
         day_name = vaara_list[Vaara]
+    else:
+        day_name = ''
 
     #Tithi Conversion 
     Tithi1 = tithi_list[Tithi[0]-1]
