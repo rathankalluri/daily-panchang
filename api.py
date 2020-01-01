@@ -6,8 +6,10 @@ from datetime import timedelta
 import sys
 import pytz
 import json
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/panchang-api/v1.0/')
 def login():
