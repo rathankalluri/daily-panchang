@@ -7,3 +7,4 @@ pyswisseph==2.0.0.post2
 pytz==2019.1
 werkzeug>=0.15.3
 gunicorn==19.9.0
+flask-cors
