@@ -301,7 +301,7 @@ def login():
     }
     return jsonify(data2)
 
-@app.route('/panchange-api/get-birthday/')
+@app.route('/panchang-api/get-birthday/')
 def get_date_this_year():
     maasa = request.args.get('maasa')
     thithi = request.args.get('thithi')
