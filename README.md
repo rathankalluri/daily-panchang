@@ -8,4 +8,4 @@ The Cities that it can serve are all the major cities around the world.
 
 New feature of reverse mapping Maasa, Tithi and Paksha for getting the Georgian calender birthday date this year is added.
 
-http://astro-torch.herokuapp.com/panchange-api/get-birthday/?maasa=Pushya&thithi=Navami&paksha=1
+http://astro-torch.herokuapp.com/panchang-api/get-birthday/?maasa=Pushya&thithi=Navami&paksha=1
