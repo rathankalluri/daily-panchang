@@ -7,6 +7,7 @@ import sys
 import pytz
 import json
 from flask_cors import CORS
+import pandas as pd
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/panchang-api/*": {"origins": "*"}})
@@ -297,6 +298,28 @@ def login():
         'Yama Kalam': yama_kalam,
         'Gulika Kalam': gulika_kalam,
         'Durmuhurtam': durmu_today
+    }
+    return jsonify(data2)
+
+@app.route('/panchange-api/get-birthday/')
+def get_date_this_year():
+    maasa = request.args.get('maasa')
+    thithi = request.args.get('thithi')
+    paksha = request.args.get('paksha')
+
+    dataset = pd.read_csv('Y2019-20.csv',header=None)
+
+    # CODE FOR getting DATE
+    data = dataset.loc[dataset[1] == maasa]
+    dob = list(data.loc[dataset[2].str.contains(thithi)][0].reset_index(drop=True))
+    if paksha == 1:
+        dob = dob[0]
+    else:
+        dob = dob[1]
+    data2 = {
+        'Maasa':maasa,
+        'Thithi': thithi,
+        'DOB': dob
     }
     return jsonify(data2)
 
