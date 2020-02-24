@@ -212,7 +212,7 @@ def login():
         rahu_kal_start = to_dt(rahu_kal_start)
         rahu_kal_end = to_dt(rahu_kal_end)
 
-        return ("Start: {0} , End: {1}".format(rahu_kal_start, rahu_kal_end))
+        return (" {0} -  {1}".format(rahu_kal_start, rahu_kal_end))
 
     def yamaganda_kalam(Vaara,day_dura,yama_kala_cal,SRA):
         yama_kal_start = decimal_SR(SRA)+day_dura[0]*yama_kala_cal[Vaara]
@@ -221,7 +221,7 @@ def login():
         yama_kal_start = to_dt(yama_kal_start)
         yama_kal_end = to_dt(yama_kal_end)
 
-        return ("Start: {0} , End: {1}".format(yama_kal_start, yama_kal_end))
+        return (" {0} -  {1}".format(yama_kal_start, yama_kal_end))
 
     def gulika(Vaara,day_dura,gulika_kala_cal,SRA):
         gulika_kal_start = decimal_SR(SRA)+day_dura[0]*gulika_kala_cal[Vaara]
@@ -230,7 +230,7 @@ def login():
         gulika_kal_start = to_dt(gulika_kal_start)
         gulika_kal_end = to_dt(gulika_kal_end)
 
-        return ("Start: {0} , End: {1}".format(gulika_kal_start, gulika_kal_end))
+        return (" {0} -  {1}".format(gulika_kal_start, gulika_kal_end))
 
     night_dura, night_dura_formated = get_night_duration(MR, MS)
 
@@ -256,12 +256,12 @@ def login():
 
     if durmu2==None:
         till = durmu1+day_durat
-        durmu_today = "Start: {0} , End: {1}".format(to_dt(durmu1), to_dt(till))
+        durmu_today = " {0} -  {1}".format(to_dt(durmu1), to_dt(till))
         #print (durmu_today)
     else:
         till1 = durmu1+day_durat
         till2 = durmu2+day_durat
-        durmu_today = "Start: {0} , End: {1}, and again from Start: {2} , End: {3}".format(to_dt(durmu1), to_dt(till1), to_dt(durmu2), to_dt(till2))
+        durmu_today = " {0} -  {1}, and again from  {2} -  {3}".format(to_dt(durmu1), to_dt(till1), to_dt(durmu2), to_dt(till2))
         #print (durmu_today)
 
     def amrita_gadiyas(star_time1, Nakshatra, star_start_time):
