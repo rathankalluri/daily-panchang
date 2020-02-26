@@ -212,7 +212,7 @@ def login():
         rahu_kal_start = to_dt(rahu_kal_start)
         rahu_kal_end = to_dt(rahu_kal_end)
 
-        return (" {0} -  {1}".format(rahu_kal_start, rahu_kal_end))
+        return ("{0} -  {1}".format(rahu_kal_start, rahu_kal_end))
 
     def yamaganda_kalam(Vaara,day_dura,yama_kala_cal,SRA):
         yama_kal_start = decimal_SR(SRA)+day_dura[0]*yama_kala_cal[Vaara]
@@ -221,7 +221,7 @@ def login():
         yama_kal_start = to_dt(yama_kal_start)
         yama_kal_end = to_dt(yama_kal_end)
 
-        return (" {0} -  {1}".format(yama_kal_start, yama_kal_end))
+        return ("{0} -  {1}".format(yama_kal_start, yama_kal_end))
 
     def gulika(Vaara,day_dura,gulika_kala_cal,SRA):
         gulika_kal_start = decimal_SR(SRA)+day_dura[0]*gulika_kala_cal[Vaara]
@@ -230,7 +230,7 @@ def login():
         gulika_kal_start = to_dt(gulika_kal_start)
         gulika_kal_end = to_dt(gulika_kal_end)
 
-        return (" {0} -  {1}".format(gulika_kal_start, gulika_kal_end))
+        return ("{0} -  {1}".format(gulika_kal_start, gulika_kal_end))
 
     night_dura, night_dura_formated = get_night_duration(MR, MS)
 
