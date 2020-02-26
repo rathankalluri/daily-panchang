@@ -256,12 +256,12 @@ def login():
 
     if durmu2==None:
         till = durmu1+day_durat
-        durmu_today = " {0} -  {1}".format(to_dt(durmu1), to_dt(till))
+        durmu_today = "{0} -  {1}".format(to_dt(durmu1), to_dt(till))
         #print (durmu_today)
     else:
         till1 = durmu1+day_durat
         till2 = durmu2+day_durat
-        durmu_today = " {0} -  {1}, and again from  {2} -  {3}".format(to_dt(durmu1), to_dt(till1), to_dt(durmu2), to_dt(till2))
+        durmu_today = "{0} -  {1}, and again from  {2} -  {3}".format(to_dt(durmu1), to_dt(till1), to_dt(durmu2), to_dt(till2))
         #print (durmu_today)
 
     def amrita_gadiyas(star_time1, Nakshatra, star_start_time):
