@@ -61,19 +61,13 @@ def login():
 
     date = gregorian_to_jd(Date(date.year, date.month, date.day))
     #date = gregorian_to_jd(Date(2019, 4, 11))
-
+    loc = "temp"
     data = {
         'Given Location':loc,
         'Given Date':date
     }
     #print loc
     #print date
-
-    with open("newcities.json") as fp:
-        cities = json.load(fp)
-        #only_cities = cities.keys()
-    if loc not in cities:
-        return jsonify({'Error':'City Not found'})
 
     lat = float(loc_lat)
     lon = float(loc_lon)
