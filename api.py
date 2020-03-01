@@ -8,14 +8,21 @@ import pytz
 import json
 from flask_cors import CORS
 import pandas as pd
+from timezonefinder import TimezoneFinder
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/panchang-api/*": {"origins": "*"}})
 
+def getTZ(Lat,Lon):
+    tf = TimezoneFinder()
+    latitude, longitude = float(Lat), float(Lon)
+    return tf.timezone_at(lng=longitude, lat=latitude) # returns 'Europe/Berlin'
+
 @app.route('/panchang-api/v1.0/')
 def login():
     date = request.args.get('date')
-    loc = request.args.get('location')
+    loc_lat = request.args.get('lat')
+    loc_lon = request.args.get('lon')
 
     #PARAMETERS LISTS
 
@@ -68,9 +75,10 @@ def login():
     if loc not in cities:
         return jsonify({'Error':'City Not found'})
 
-    lat = float(cities[loc]["latitude"])
-    lon = float(cities[loc]["longitude"])
-    tz = cities[loc]["timezone"]
+    lat = float(loc_lat)
+    lon = float(loc_lon)
+    tz = getTZ(lat,lon)
+    #cities[loc]["timezone"]
     #timez = pytz.timezone(tz)
 
     #dt = datetime.utcnow()

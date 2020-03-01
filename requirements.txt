@@ -10,3 +10,4 @@ gunicorn==19.9.0
 flask-cors
 numpy==1.18.1
 pandas==0.25.3
+timezonefinder
