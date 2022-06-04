@@ -109,6 +109,7 @@ def login():
     Yoga = yoga(date,location)
     Masa = masa(date, location)
     Ritu = ritu(Masa[0])
+    Samvathsara = samvatsara(date, Masa[0])
 
     #Day Duration for Rahu, Yamganda kalas
     day_dura = day_duration(date, location)
@@ -297,7 +298,8 @@ def login():
         'Rahu Kalam': rahu_kalam,
         'Yama Kalam': yama_kalam,
         'Gulika Kalam': gulika_kalam,
-        'Durmuhurtam': durmu_today
+        'Durmuhurtam': durmu_today,
+        'Samvathsara': Samvathsara
     }
     return jsonify(data2)
 
