@@ -259,7 +259,7 @@ def karana(jd, place):
   solar_long = solar_longitude(rise)
   lunar_long = lunar_longitude(rise)
   #moon_phase = (lunar_long - solar_long) % 360
-  moon_phase = tuple(np.substract(lunar_long, solar_long)) % 360
+  moon_phase = tuple(np.subtract(lunar_long, solar_long)) % 360
   today = ceil(moon_phase / 6)
   degrees_left = today * 6 - moon_phase
 
@@ -323,7 +323,7 @@ def lunar_phase(jd):
   solar_long = solar_longitude(jd)
   lunar_long = lunar_longitude(jd)
   #moon_phase = (lunar_long - solar_long) % 360
-  moon_phase = tuple(np.substract(lunar_long, solar_long)) % 360
+  moon_phase = tuple(np.subtract(lunar_long, solar_long)) % 360
   return moon_phase
 
 def samvatsara(jd, maasa_num):
