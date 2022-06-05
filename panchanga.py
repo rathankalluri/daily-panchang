@@ -29,7 +29,6 @@ from __future__ import division
 from math import floor, ceil
 from collections import namedtuple as struct
 import swisseph as swe
-import numpy as np
 
 Date = struct('Date', ['year', 'month', 'day'])
 Place = struct('Location', ['latitude', 'longitude', 'timezone'])
@@ -258,8 +257,7 @@ def karana(jd, place):
   # 2. Find karana at this JDN
   solar_long = solar_longitude(rise)
   lunar_long = lunar_longitude(rise)
-  #moon_phase = (lunar_long - solar_long) % 360
-  moon_phase = tuple(np.subtract(lunar_long, solar_long)) % 360
+  moon_phase = (lunar_long - solar_long) % 360
   today = ceil(moon_phase / 6)
   degrees_left = today * 6 - moon_phase
 
@@ -322,8 +320,7 @@ def raasi(jd):
 def lunar_phase(jd):
   solar_long = solar_longitude(jd)
   lunar_long = lunar_longitude(jd)
-  #moon_phase = (lunar_long - solar_long) % 360
-  moon_phase = tuple(np.subtract(lunar_long, solar_long)) % 360
+  moon_phase = (lunar_long - solar_long) % 360
   return moon_phase
 
 def samvatsara(jd, maasa_num):
