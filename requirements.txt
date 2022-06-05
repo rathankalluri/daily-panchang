@@ -3,7 +3,7 @@ Flask==1.0.2
 itsdangerous==1.1.0
 Jinja2==2.11.3
 MarkupSafe==1.1.1
-pyswisseph==2.5.1.post0
+pyswisseph==2.8.0.post1
 pytz==2019.1
 werkzeug>=0.15.3
 gunicorn==19.9.0
