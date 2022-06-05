@@ -8,5 +8,5 @@ pytz==2019.1
 werkzeug>=0.15.3
 gunicorn==19.9.0
 flask-cors
-numpy==1.21
+numpy==1.19.5
 pandas==0.25.3
