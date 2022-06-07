@@ -28,6 +28,8 @@ Use Swiss ephemeris to calculate tithi, nakshatra, etc.
 from __future__ import division
 from math import floor, ceil
 from collections import namedtuple as struct
+import sys
+print (sys.path)
 import swisseph as swe
 
 Date = struct('Date', ['year', 'month', 'day'])
